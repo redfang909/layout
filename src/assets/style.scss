@@ -1,0 +1,217 @@
+$family: 'IBM Plex Sans', sans-serif;
+body, html{
+  height: 100%;
+  min-height: 100%;
+  background: #16171C!important;
+  overflow-y: hidden;
+}
+body.preview{
+  overflow-y: auto;
+  background: #fff!important;
+}
+#main-wrapper{
+  position: relative;
+  height: 100%;
+  min-height: 100%;
+}
+#layout-grid {
+    position: relative;
+    height: 100%;
+    min-height: 100%;
+    color: #fff;
+    padding: 10px;
+    float: right;
+    width: 90vw;
+    > .container-fluid {
+      height: 100%;
+      min-height: 100%;
+    }
+  }
+#main {  
+  background-color: #1F2227;
+  border-radius: 10px;
+  color: #1F2227;
+}
+  .content {
+    background-color: #e6e6e6;
+    height: 100%;
+    margin: 20px 0;
+    position: relative;
+  }
+  .active {
+    background: green;
+  }
+  .drag,
+  .drop {
+    font-family: sans-serif;
+    background: #ccc;
+    position: relative;
+    padding: 13px 0;
+    vertical-align: top;
+  }
+  .drag {
+    color: #fff;
+    cursor: move;
+    background: none;
+    font-family: $family;
+    font-weight: bold;
+    text-transform: uppercase;
+    &:hover{
+      background-color: #08D4A3;
+    }
+  }
+  .drop {
+    background: #efefef;
+    width: 100%;
+    padding-bottom: 100px;
+    position: relative;
+    &:before{
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      text-align: center;
+      color: #cccdce;
+      height: 80px;
+      font:bold 25px $family;
+      border-radius: 10px;
+      border: 1px #ccc solid;
+      padding-top: 20px;
+      content: 'Drop your element here';
+    }
+    > .division-layout {
+      -webkit-box-shadow: inset 0px 0px 14px 0px rgba(0,0,0,0.09);
+      -moz-box-shadow: inset 0px 0px 14px 0px rgba(0,0,0,0.09);
+      box-shadow: inset 0px 0px 14px 0px rgba(0,0,0,0.09);
+    }
+  }
+.division-layout{
+  background-color: #e0eaff;
+  &:after{
+    border: 1px #0AE6B2 solid;
+    content: '';
+    position: absolute;
+    z-index: 0;
+    bottom: 2px;
+    left: 2px;
+    top: 2px;
+    right: 2px;
+    pointer-events: none;
+  }
+}
+.paragraph-layout{
+  padding: 15px;   
+}
+  #block-content{
+    min-height: 200px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    overflow-y: auto;
+    height: 88vh;
+  }
+  #html-tools{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10vw;
+    height: 100%;
+    min-height: 100%;
+    background-color: #1F2227;
+  }
+  #html-tools ul {
+    margin: 0;
+    padding: 40px 0 0;
+    text-align: center;
+    list-style: none;
+    display: inline-block;
+    width: 100%;
+    li {
+      display: block;
+    }
+  }  
+
+  .div-menu {
+    position: relative;
+  }
+  .set-form {
+    position: absolute;
+    width: 400px;
+    height: 100px;
+    display: none;
+    color: #000;
+    bottom: 100%;
+    > div {
+      padding: 15px;
+    }
+  }
+.header{
+  height: 50px;
+}
+.top-block {
+  float: right;
+}
+.code-btn{
+  background-color: #FF594F;
+  color: #fff;
+  font: bold 16px $family;
+  border: none;
+  padding: 10px;
+  &:hover{
+    color: #fff!important;
+    text-decoration: none!important;
+  }
+}
+.code-editor{
+  position: fixed;
+  top: 0;
+  right: 0; 
+  height: 100%;
+  overflow: hidden;
+  z-index: 10;
+  width: 0;
+  transition: width 1s;
+  .close-btn{
+    background-color: #FF594F;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    text-decoration: none;
+    font: bold 18px $family;
+    position: absolute;
+    top: 0;
+    right: 0;    
+    text-align: center;
+    line-height: 30px;   
+  }
+  &.show {
+    width: 100vw;
+  }
+  .copy-block{
+    width: 10vw;
+    position: absolute;
+    left:0;
+    top:0;
+    opacity: 0.8;
+    bottom: 0;
+    background-color: #FF594F;
+    button{
+      background: none;
+      width: 100%;
+      height: 100%;
+      border: none;
+      color: #fff;
+      font: bold 40px $family;
+      span{
+        display: block;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .my-editor{
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 90vw;    
+  }
+}
