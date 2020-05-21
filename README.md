@@ -14,7 +14,8 @@ npm run dev
 # build for production with minification
 npm run build
 ```
-## Installation For Vue
+### Installation For Vue
 
-# https://cli.vuejs.org/guide/installation.html
+
+
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
